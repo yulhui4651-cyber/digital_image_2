@@ -1,0 +1,141 @@
+*{
+	font-family: "Helvetica", "Arial", sans-serif;
+}
+
+/*html, body {
+	margin: 0;
+	overflow-x: hidden;
+}*/
+
+/*header{
+	background: white;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	padding: 20px;
+}*/
+
+
+.fifth-memorial-hall {
+	position: absolute;
+	left: 0%;
+    top: 0%;
+	width: 100%;
+	height: 22.22222%;
+	background-position: center 0.7%;
+}
+
+.humanities-and-society-hall {
+	position: absolute;
+	left: 0%;
+    top: 22.22222%;
+	width: 100%;
+	height: 22.22222%;
+	background-color: green;
+	background-position: center 14%;
+}
+
+.library {
+	position: absolute;
+	left: 0%;
+    top: 44.44444%;
+	width: 100%;
+	height: 22.22222%;
+	background-color: pink;
+	background-position: center 26%;
+}
+
+.art-hall {
+	position: absolute;
+	left: 0%;
+    top: 66.66666%;
+	width: 100%;
+	height: 22.22222%;
+	background-color: yellow;
+	background-position: center 39%;
+}
+
+.nuri-hall {
+	position: absolute;
+	left: 0%;
+    top: 88.88888%;
+	width: 100%;
+	height: 22.22222%;
+	background-color: red;
+	background-position: center 51%;
+}
+
+.first-science-hall {
+	position: absolute;
+	left: 0%;
+    top: 111.11111%;
+	width: 100%;
+	height: 22.22222%;
+	background-color: black;
+	background-position: center 62.9999%;
+}
+
+.second-science-hall {
+	position: absolute;
+	left: 0%;
+    top: 133.33333%;
+	width: 100%;
+	height: 22.22222%;
+	background-color: olive;
+	background-position: center 75.333%;
+}
+
+.barom-hall {
+	position: absolute;
+	left: 0%;
+    top: 155.55555%;
+	width: 100%;
+	height: 22.22222%;
+	background-color: gray;
+	background-position: center 87.4444%;
+}
+
+.go-hall {
+	position: absolute;
+	left: 0%;
+    top: 177.77777%;
+	width: 100%;
+	height: 22.22222%;
+	background-color: purple;
+	background-position: center 99%;
+}
+
+h2 {
+	color: white;
+	text-align: center;
+	font-weight: 400;
+	font-size: 22px;
+	margin-top: 75px;
+}
+
+footer {
+	position: relative;
+	z-index: 9999;
+	background-color: white;
+	text-align: center;
+	/*padding: 0.5px;*/
+	top: 190vh;
+}
+
+body {
+	background-color: white;
+}
+
+.step {
+	width: 100%;
+	height: 22.22222%;
+	position: absolute;
+	left: 0;
+	background-image: url(images/digi2.png);
+	background-repeat: no-repeat;
+	background-size: 100% 900%;
+}
+
+a {
+	text-decoration: none;
+}
