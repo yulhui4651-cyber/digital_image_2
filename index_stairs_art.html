@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+	 <head>
+	 	<meta charset="UTF-8">
+	 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 	<title>조형예술대</title>
+	 	<meta name="description" content="서울여자대학교의 조형예술대의 계단에 대해서 소개합니다.">
+	 	<meta name="keywords" content="서울여자대학교, 조형예술대, 계단, 내딛음, 성장">
+	 	<link rel="stylesheet" href="style_art.css">
+	 </head>
+	 <body>
+	 	<div class="grid">
+  			<div class="cell" id="material"><br>재질</div>
+ 			<div class="cell" id="type"><br>유형</div>
+ 			<div class="cell" id="symbol"><br>상징</div>
+ 			<div class="cell" id="part"><br>부분</div>
+		</div>
+
+		<script>
+  		document.querySelectorAll('.cell').forEach(cell => {
+    	cell.addEventListener('click', () => {
+
+      
+      	if (cell.classList.contains('divided')) return;
+
+      	cell.classList.add('divided');
+
+		      cell.innerHTML = `
+		        <div class="inner-grid">
+		          <div class="inner-cell"></div>
+		          <div class="inner-cell"></div>
+		          <div class="inner-cell"></div>
+		          <div class="inner-cell"></div>
+		        </div>
+		      `;
+		    });
+		  });
+		</script>
+
+		<script>
+  		const material = document.getElementById('material');
+
+  		material.addEventListener('click', () => {
+    
+    	if (material.classList.contains('open')) return;
+
+   		material.classList.add('open');
+
+    	material.innerHTML = `
+		      	<div class="material-inner">
+		        <div class="mat-img-1"></div>
+		        <div class="mat-img-2"></div>
+		      </div>
+		    `;
+		  });
+		</script>
+
+		<script>
+			const type = document.getElementById('type');
+
+			type.addEventListener('click', () => {
+			if (type.classList.contains('open')) return;
+
+			type.classList.add('open');
+
+			type.innerHTML = `
+			      <div class="type-inner">
+			        <div id="legal">법적기준</div>
+			        <div id="form">형태기준</div>
+			      </div>
+			    `;
+
+			    bindTypeEvents();
+			  });
+
+			  function bindTypeEvents() {
+			    const legal = document.getElementById('legal');
+			    const form = document.getElementById('form');
+
+			    legal.addEventListener('click', (e) => {
+			      e.stopPropagation();
+
+			      legal.innerHTML = '피난계단';
+			      legal.style.cursor = 'default';
+			    });
+
+			    form.addEventListener('click', (e) => {
+			      e.stopPropagation();
+
+			      if (form.classList.contains('open')) return;
+			      form.classList.add('open');
+
+			      form.innerHTML = `
+			        <div class="type-inner vertical">
+			          <div>직선</div>
+			          <div>굴절</div>
+			        </div>
+			      `;
+			    });
+			  }
+		</script>
+
+		<script>
+		  const symbol = document.getElementById('symbol');
+
+		  symbol.addEventListener('click', () => {
+		    if (symbol.classList.contains('open')) return;
+
+		    symbol.classList.add('open');
+
+		    symbol.innerHTML = `
+		      <div class="type-inner">
+		        <div class="symbol-old">18세기 말</div>
+		        <div class="symbol-now">현재</div>
+		      </div>
+		    `;
+
+		    bindSymbolEvents();
+		  });
+
+		  function bindSymbolEvents() {
+		    const oldEra = symbol.querySelector('.symbol-old');
+		    const nowEra = symbol.querySelector('.symbol-now');
+
+		    oldEra.addEventListener('click', (e) => {
+		      e.stopPropagation();
+		      oldEra.textContent = '권력과 신분';
+		      oldEra.style.cursor = 'default';
+		    });
+
+		    nowEra.addEventListener('click', (e) => {
+		      e.stopPropagation();
+		      if (nowEra.classList.contains('open')) return;
+		      nowEra.classList.add('open');
+
+		      nowEra.innerHTML = `
+		        <div class="type-inner">
+		          <div>공간의 이동</div>
+		          <div>조형미</div>
+		        </div>
+		      `;
+		    });
+		  }
+		</script>
+
+
+		<script>
+		  const partCell = document.getElementById('part');
+
+		  partCell.addEventListener('click', () => {
+		    if (partCell.classList.contains('open')) return;
+
+		    partCell.classList.add('open');
+
+		    partCell.innerHTML = `
+		      <div class="part-inner">
+		        <div class="p-col" data-img="images_art/art.png">엄지기둥</div>
+		        <div class="p-tread" data-img="images_art/art_2.png">논슬립</div>
+		      </div>
+		    `;
+
+		    bindPartEvents();
+		  });
+
+		  function bindPartEvents(){
+		    const boxes = partCell.querySelectorAll('.part-inner > div');
+
+		    boxes.forEach((box) => {
+		      box.addEventListener('click', (e) => {
+		        e.stopPropagation(); 
+
+		        if (box.classList.contains('img')) return;
+
+		        const imgPath = box.dataset.img;
+		        box.classList.add('img');
+		        box.style.backgroundImage = `url('${imgPath}')`;
+		      });
+		    });
+		  }
+		</script>
+		
+	 </body>
+</html>
